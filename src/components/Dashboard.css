@@ -1,0 +1,298 @@
+/*  General Container= */
+
+
+
+.dashboard-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0);
+  
+
+}
+
+
+
+
+
+/*  Fullscreen Map Area  */
+.dashboard-maparea {
+  position: absolute;
+  top: 0; 
+  bottom: 0;
+  left: 0; 
+  right: 0;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/*  Top Header  */
+.dashboard-topnav {
+  position: relative;
+  z-index: 10;
+  color: #ffffff;
+  padding: 14px 28px;
+  font-size: 2.2rem;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+}
+
+/*  Body Layout  */
+.dashboard-body {
+  position: absolute;
+  top: 56px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  z-index: 15;
+}
+
+/*  Sidebar Box Wrapper  */
+.sidebar-wrapper {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  max-width: 300px;
+  width: 100%;
+  z-index: 10;
+  height: 400px;
+}
+
+/*  Sidebar Container */
+.sidebar-container {
+  background-color: rgba(32, 27, 27, 0.08);
+  color: white;
+  padding: 12px;
+  border: 1px solid rgba(23, 21, 21, 0.3);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.08);
+  width: 220px;
+  height: 400px;
+}
+
+/*  Sidebar Title  */
+.sidebar-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #ffffff;
+}
+
+/*  Box  */
+.box {
+  margin-bottom: 16px;
+  color: white;
+}
+
+/*  Box Header  */
+.box-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  color: white;
+}
+
+/*  PNG Icon Styling  */
+.icon {
+  height: 1.2rem;
+  margin-right: 10px;
+  filter: brightness(0) invert(1); /* Makes PNG icon white ...abhi*/
+}
+
+/*  Heading  */
+.heading {
+  font-size: 1rem;
+  font-weight: 600;
+  flex-grow: 1;
+}
+
+/*  Status Dot  */
+.status-dot {
+  height: 0.6rem;
+  width: 0.6rem;
+  border-radius: 9999px;
+  margin-left: auto;
+  margin-top: 0.125rem;
+}
+
+.status-dot.green {
+  background-color: #22c55e;
+}
+
+.status-dot.blue {
+  background-color: #3b82f6;
+}
+
+/*  Label and Inputs  */
+.label {
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+  color: rgb(236, 223, 223) !important;
+  display: block;
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgb(247, 241, 241);
+  border: 1px solid rgba(230, 15, 15, 0.3);
+  font-size: 0.75rem;
+  margin-bottom: 10px;
+}
+
+/*  Cargo Status Box  */
+.cargo-status {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cargo-item {
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 0.75rem;
+  gap: 0.5rem;
+  color: rgb(212, 148, 148);
+  background-color: rgba(8, 7, 7, 0.06);
+  border-radius: 6px;
+}
+.options {
+  display: flex;
+  color: rgb(33, 30, 30);
+  align-items: center;
+  gap: 0.5rem;
+}
+.cargo-icon, .status-icon {
+  height: 1rem;
+}
+
+.cargo-label {
+  flex-grow: 5;
+}
+
+/*  Generate Button  */
+.generate-button {
+  width: 210px;
+  margin-top: 0.5rem;
+  padding: 0.6rem;
+  background-color: rgba(30, 26, 26, 0.2);
+  color: white;
+  font-weight: bold;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  
+  border-radius: 6px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.generate-button:hover {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+/*  Tracks Panel  */
+.tracks-panel {
+  position: absolute;
+  top: -45px;
+  right: 16px;
+  width: 180px;
+  max-height: calc(100vh - 280px);
+  overflow-y: auto;
+  background-color: rgba(18, 25, 32, 0.8);
+  color: white;
+  padding: 10px;
+  z-index: 20;
+  border-radius: 8px;
+}
+
+/*  Track Title and Box  */
+.tracks-title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.track-box {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid;
+}
+
+.track-ontime {
+  background-color: rgba(16, 185, 129, 0.1);
+  border-color: #10b981;
+}
+
+.track-delayed {
+  background-color: rgba(249, 115, 22, 0.1);
+  border-color: #f97316;
+}
+
+.track-id {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.status-ok {
+  color: #10b981;
+}
+
+.status-warn {
+  color: #facc15;
+}
+
+/*  Vehicle Panel ... new added to integrate ...abhi */
+.vehicle-panel-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 30;
+}
+
+@media (max-width: 1024px) {
+  .sidebar-wrapper {
+    max-width: 260px;
+  }
+  .sidebar-container {
+    width: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-topnav {
+    font-size: 1.8rem;
+    padding: 10px 16px;
+  }
+  .sidebar-wrapper {
+    max-width: 220px;
+    top: 5px;
+    left: 5px;
+  }
+  .sidebar-container {
+    width: 220px;
+    height: auto;
+    max-height: calc(100vh - 250px);
+    overflow-y: auto;
+    padding: 8px;
+  }
+  .box { margin-bottom: 10px; }
+  .label, .input { font-size: 0.65rem; padding: 6px; }
+  .tracks-panel {
+    top: 5px;
+    right: 5px;
+    width: 160px;
+    padding: 6px;
+  }
+}
