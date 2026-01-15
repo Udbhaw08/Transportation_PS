@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #696464;
+  color: #dce9e9;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+.popup-container {
+  animation: fadeIn 0.8s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.popup-container.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Control Panel ... minor change from previous ....abhi */
+.control-panel {
+  width: 300px;
+  background-color: #1b1b1b;
+  padding: 20px;
+  border-right: 2px solid #333;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  animation: fadeIn 0.8s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  
+}
+
+.control-panel h2 {
+  margin-bottom: 10px;
+  color: #5affd1;
+  text-align: center;
+}
+
+.control-panel label {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.control-panel select,
+.control-panel input,
+.control-panel button {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.control-panel select,
+.control-panel input {
+  background-color: #2b2b2b;
+  color: #fff;
+}
+
+.control-panel button {
+  background-color: #0f766e;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.control-panel button:hover {
+  background-color: #0d9488;
+}
+
+/* Map Section full screen change ....abhi*/
+.map-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+/* Route Comparison Panel */
+.comparison-panel {
+  position: absolute;
+  top: 1px;
+  right: 170px;
+  background-color: rgba(18, 25, 32, 0.8);/* changed the colour to match ...abhi  */
+  color: #e2e8f0;
+  padding: 16px;
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  max-height: 90vh;
+  overflow-y: auto;
+  font-size: 0.95rem;
+  display: none; /* abhi changed — initially hidden */
+}
+.comparison-panel.show-comparison {
+  display: block; /* abhi changed — show only when route is being shown */
+}
+.comparison-panel h3 {
+  margin-bottom: 10px;
+  color: #38bdf8;
+}
+
+#route-comparison .route-box {
+  background-color: #2a2a2a;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-left: 4px solid #38bdf8;
+  border-radius: 4px;
+}
+
+.route-box.selected {
+  border-color: #5affd1;
+  background-color: #333;
+}
+/* Tooltip Styling display changes ...abhi */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: max-content;
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  z-index: 10;
+  bottom: 125%; 
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 0.85rem;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Route Box Styling  colour change... abhi*/
+#route-comparison .route-box {
+  background-color: #2a2a2a;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-left: 5px solid #38bdf8;
+  border-radius: 6px;
+  transition: 0.3s all;
+  cursor: pointer;
+}
+
+.route-box:hover {
+  background-color: #2d2d2d;
+  border-left-color: #5affd1;
+}
+
+.route-box.selected {
+  border-color: #5affd1;
+  background-color: #3b3b3b;
+  box-shadow: 0 0 10px #5affd1aa;
+}
+
+/* Marker Labels (Start/End) ...abhi */
+.marker {
+  background-color: #ff4757;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #fff;
+}
+
+.marker.start {
+  background-color: #2ed573;
+}
+
+.marker.end {
+  background-color: #ff6b81;
+}
