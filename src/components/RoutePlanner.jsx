@@ -4,7 +4,7 @@ import mapboxgl from 'mapbox-gl';
 import '../components/planner.css';
 import ActionPopup from './ActionPopup';
 
-mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN || 'YOUR_MAPBOX_ACCESS_TOKEN';
+mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
 
 
 const fuelFactors = {

@@ -3,7 +3,7 @@ import mapboxgl from 'mapbox-gl';
 import './SplashScreen.css';
 import { useNavigate } from 'react-router-dom';
 
-mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN || 'YOUR_MAPBOX_ACCESS_TOKEN';
+mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
 const loadingMessages = [
   "Connecting to assets...",
   "Gathering updated info...",
