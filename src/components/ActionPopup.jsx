@@ -30,7 +30,7 @@ const ActionPopup = () => {
     }
 
     return () => clearTimeout(stepTimeout);
-  }, [currentStep]);
+  }, [currentStep, complete]);
 
   useEffect(() => {
     // animation part ....abhi ..
