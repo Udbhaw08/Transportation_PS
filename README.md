@@ -141,22 +141,18 @@ Army-vehicle-dispatch-mvp-main/
 │   │   ├── tick.png               # Confirmation tick
 │   │   └── triangle.png           # Warning triangle
 │   │
-│   ├── components/                # Reusable UI components
-│   │   ├── SplashScreen.jsx       # Animated intro screen
-│   │   ├── SplashScreen.css
-│   │   ├── Dashboard.jsx          # Main layout — route input, cargo, status
-│   │   ├── Dashboard.css
-│   │   ├── RoutePlanner.jsx       # Mapbox map + route logic
-│   │   ├── planner.css
-│   │   ├── VehiclePanel.jsx       # Fleet inventory display
-│   │   ├── VehiclePanel.css
-│   │   ├── ActionPopup.jsx        # Dispatch progress overlay
-│   │   ├── ActionPopup.css
-│   │   └── ConfirmationBox.jsx    # Convoy verification widget
-│   │
-│   └── pages/
-│       └── OrchestrationPage.jsx  # Dev/test scratch page (not in router)
-│
+│   └── components/                # Reusable UI components
+│       ├── SplashScreen.jsx       # Animated intro screen
+│       ├── SplashScreen.css
+│       ├── Dashboard.jsx          # Main layout — route input, cargo, status
+│       ├── Dashboard.css
+│       ├── RoutePlanner.jsx       # Mapbox map + route logic
+│       ├── planner.css
+│       ├── VehiclePanel.jsx       # Fleet inventory display
+│       ├── VehiclePanel.css
+│       ├── ActionPopup.jsx        # Dispatch progress overlay
+│       ├── ActionPopup.css
+│       └── ConfirmationBox.jsx    # Convoy verification widget
 ├── build/                         # Production build artifacts
 ├── .env                           # Environment variables (Mapbox token)
 ├── .gitignore
