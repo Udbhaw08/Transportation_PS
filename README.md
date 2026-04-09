@@ -97,20 +97,7 @@ All route computation, fuel estimation, and ETA calculation run entirely in the 
 
 ## Tech Stack
 
-| Layer | Technology | Version | Purpose |
-|---|---|---|---|
-| UI Framework | React | 19.1.0 | Component-based rendering |
-| Routing | React Router DOM | 7.6.0 | Client-side page navigation |
-| Mapping | Mapbox GL JS | 3.12.0 | Interactive map, route rendering |
-| Geocoding | Mapbox Geocoding API | — | Location name → coordinates |
-| Directions | Mapbox Directions API | — | Alternative route computation |
-| UI Components | Radix UI (Tabs) | 1.1.12 | Accessible tab primitives |
-| Icons | Lucide React | 0.511.0 | SVG icon library |
-| CSS Framework | Tailwind CSS | 4.1.7 | Utility-first styling |
-| CSS Processing | PostCSS + Autoprefixer | 8.5.3 / 10.4.21 | Vendor prefixing |
-| Tooling | Create React App (react-scripts) | 5.0.1 | Build system and dev server |
-| Testing | React Testing Library | 16.3.0 | Component unit testing |
-| Performance | Web Vitals | 2.1.4 | Core web metrics |
+(Tech stack details removed)
 
 ---
 
@@ -178,15 +165,7 @@ App
 
 ### Component Responsibilities
 
-| Component | Responsibility |
-|---|---|
-| **App** | Defines routes (`/` and `/Dashboard`) using React Router |
-| **SplashScreen** | 8-second animated intro with rotating status messages and a Mapbox background; auto-redirects to Dashboard |
-| **Dashboard** | Application shell — holds route input form, cargo status cards, convoy tracker, and wires RoutePlanner via ref |
-| **RoutePlanner** | Owns Mapbox GL instance; geocodes locations; fetches and renders 4 alternative routes; calculates fuel/ETA per vehicle type; exposes `planRoute()` via `useImperativeHandle` |
-| **VehiclePanel** | Reads static fleet inventory; renders vehicle cards with category tabs, capacity, hours, and maintenance warnings |
-| **ActionPopup** | Animated progress modal shown during route generation; fires the actual `planRoute()` call on `plannerRef` |
-| **ConfirmationBox** | Floating confirmation UI for verifying convoy dispatch |
+(Component responsibilities removed)
 
 ### Inter-Component Communication
 
@@ -333,11 +312,7 @@ RoutePlanner ──(CustomEvent: "routeSelected")──▶ Dashboard listener
 
 ### Mapbox APIs
 
-| API | Endpoint | Usage |
-|---|---|---|
-| **Mapbox GL JS** | CDN bundle | Interactive map rendering, layer/source management, marker placement |
-| **Geocoding v5** | `api.mapbox.com/geocoding/v5/mapbox.places/{query}.json` | Resolves location name strings to `[lng, lat]` coordinates |
-| **Directions v5** | `api.mapbox.com/directions/v5/mapbox/driving/{coords}` | Returns up to 4 alternative driving routes as GeoJSON |
+(External integration details removed)
 
 **Directions API parameters used:**
 ```
@@ -365,10 +340,7 @@ All `REACT_APP_` prefixed variables are inlined into the browser bundle at build
 
 ### Map Defaults
 
-| Screen | Center Coordinates | Zoom |
-|---|---|---|
-| SplashScreen | `[77.5946, 12.9716]` (Bengaluru) | 12 |
-| Dashboard | `[77.209, 28.6139]` (New Delhi) | 4 |
+(Map defaults removed)
 
 ### NPM Scripts
 
@@ -420,14 +392,6 @@ npm run build
 
 ## Architectural Patterns
 
-| Pattern | Where Applied | Purpose |
-|---|---|---|
-| **Component-Based UI** | All `.jsx` files | Encapsulate UI into isolated, reusable units |
-| **Ref Forwarding + `useImperativeHandle`** | Dashboard → RoutePlanner | Parent triggers child method (`planRoute`) imperatively |
-| **Browser CustomEvent** | RoutePlanner → Dashboard | Loosely coupled child-to-parent route selection signal |
-| **Controlled State** | Dashboard form inputs | Origin/destination strings driven by `useState` |
-| **Side-Effect Hooks** | Map initialization, API calls | `useEffect` manages Mapbox lifecycle and async fetches |
-| **CSS Module Isolation** | Each component has a `.css` file | Prevent style leakage between components |
-| **Static Data as Constants** | Vehicle inventory, speed/fuel tables | Avoids unnecessary external API dependencies in MVP |
+(Architectural patterns removed)
 
 ---
